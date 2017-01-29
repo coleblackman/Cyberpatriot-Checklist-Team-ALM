@@ -30,8 +30,11 @@
    <code>
    wireshark netcat-bsd netcat netcat-openbsd Ophcrack john john-bsd john-openbsd john-freebsd vuze frostwire aircrack metasploit_framework nessus snort kismet nikto yersinia burp-suite THCHydra  oclhashcat  maltego oswapzed cainandabel cain angryipscanner ipscan ettercap hydra medusa
    </code> if found, <code>sudo apt purge ##PROGRAM NAME##</code>
-18. Unauthorized media files can be sourced with <code> find ./ -type f \( -iname \*.jpg -o -iname \*.sh -o -iname \*.png -o -iname \*.bmp -o -iname \*.mov -o -iname \*.mp3 -o -iname \*.mp4 -o -iname \*.mp3 -o -iname \*.jpeg -o -iname \*.mng -o -iname \*.gif -o -iname \*.mpeg -o -iname \*.flv \) -r </code> as well as <code>sudo ls -Ra *</code>
+18. Unauthorized media files can be sourced with <code>cd /home</code> and then <code>find ./ -type f \( -iname \*.jpg -o -iname \*.sh -o -iname \*.png -o -iname \*.bmp -o -iname \*.mov -o -iname \*.mp3 -o -iname \*.mp4 -o -iname \*.mp3 -o -iname \*.jpeg -o -iname \*.mng -o -iname \*.gif -o -iname \*.mpeg -o -iname \*.flv \) -r </code> as well as <code>sudo ls -Ra *</code>
 19. Password/PAM. To begin, <code>sudo vi /etc/login.defs</code> and change to <code>PASS_MIN_DAYS 7
 				PASS_MAX_DAYS 90
 				PASS_WARN_AGE 14</code>
 20. Now, <code>sudo vi /etc/pam.d/common-auth</code> and <code>auth optional pam_tally.so deny=5 unlock_time=900 onerr=fail audit even_deny_root_account silent</code> also, Now, <code>sudo vi /etc/pam.d/common-password</code> Add <code>deny=5 unlock_time=1800 </code> to the pam_tally2.so line
+21. Change all passwords to the requirement in the README.
+22. Execute other requirements from servers such as mySQL or APACHE2.
+23. Read through the entire README to find hidden points.
