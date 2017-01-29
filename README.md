@@ -10,7 +10,7 @@ LINUX/UBUNTU
 5. Update Bash <code>sudo apt-get dist-upgrade</code>
 
 6. Read through users on README and verify 
-   No unnecessary users
+   <br>No unnecessary users</br>
    No users not on the system
    All users have correct permissions
 7. 
