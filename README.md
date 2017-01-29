@@ -1,8 +1,9 @@
 # Cyberpatriot-Checklist-Team-ALM
 
-LINUX/UBUNTU<br>
+LINUX/UBUNTU
+
 1. README file
-</br>
+
 2. Read over the forensic questions
 
 3. Update entire system- <code>sudo apt update</code>
