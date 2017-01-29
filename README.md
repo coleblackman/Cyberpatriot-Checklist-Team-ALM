@@ -23,10 +23,14 @@
 11. Lock down root to disable <code>su</code> by <code>sudo vi /etc/ssh/ssh_config</code> and <code>PermitRootLogin no</code>
 12. <code>sudo vi /etc/group</code> and remove unauthorized accounts
 13. Settings/Updates and enable automatic updates
-14. <code>sudo netstat -lntup</code> or <code>sudo ss -lntup</code> to determine open ports. To close unauthorized ports (not on the readme) use 
+14. <code>sudo netstat -lntup</code> or <code>sudo ss -lntup</code> to determine open ports. To close unauthorized ports (not on the readme) use <code>sudo lsof -i :$port</code><code>whereis ##PROGRAM NAME##</code> and use <code>dpkg -S ##PROGRAM LOCATION##</code> now, *carefully* <code>rm ##PROGRAM LOCATION##</code> and <code>killall -9 ##PROGRAME NAME##</code> and <code>sudo apt purge ##PACKAGE LOCATION##</code> Finally, check to make sure it is gone.
 15. <code>sudo ufw enable</code>
 16. <code>cat /proc/sys/net/ipv4/tcp_syncookies</code> and <code>sysctl -n net.ipv4.tcp_syncookies</code> to enable syn protection
 17. Insure none of the unauthorized tools are running <code>sudo apt install synaptic</code> to use a package manager. Known malicious programs:
    <code>
    wireshark netcat-bsd netcat netcat-openbsd Ophcrack john john-bsd john-openbsd john-freebsd vuze frostwire aircrack metasploit_framework nessus snort kismet nikto yersinia burp-suite THCHydra  oclhashcat  maltego oswapzed cainandabel cain angryipscanner ipscan ettercap hydra medusa
-   </code>
+   </code> if found, <code>sudo apt purge ##PROGRAM NAME##</code>
+ 18. Unauthorized media files can be sourced with <code> find ./ -type f \( -iname \*.jpg -o -iname \*.sh -o -iname \*.png -o -iname \*.bmp -o -iname \*.mov -o -iname \*.mp3 -o -iname \*.mp4 -o -iname \*.mp3 -o -iname \*.jpeg -o -iname \*.mng -o -iname \*.gif -o -iname \*.mpeg -o -iname \*.flv \) -r </code> as well as <code>sudo ls -Ra *</code>
+ 19. Password/PAM. To begin, <code>sudo vi /etc/login.defs</code> and change to <code>PASS_MIN_DAYS 7
+				PASS_MAX_DAYS 90
+				PASS_WARN_AGE 14</code>
