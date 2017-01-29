@@ -38,3 +38,12 @@
 21. Change all passwords to the requirement in the README.
 22. Execute other requirements from servers such as mySQL or APACHE2.
 23. Read through the entire README to find hidden points.
+24. Crontab <code>sudo vi /var/spool/cron/cronjobs</code> as well as <code>sudo crontab -e</code>
+25. <code>sudo apt install clamav</code> and <code>sudo freshclam</code> finally <code>sudo clamscan -r</code>
+26. Look for bad lines in <code>sudo vi /etc/hosts</code>
+27. If IPv6 is disabled, <code>sudo vi /etc/sysctl.conf</code><code>net.ipv6.conf.all.disable_ipv6 = 1
+	net.ipv6.conf.default.disable_ipv6 = 1
+	net.ipv6.conf.lo.disable_ipv6 = 1
+	
+	sudo gedit /etc/default/ufw 
+		Set IPv6 = yes</code>
