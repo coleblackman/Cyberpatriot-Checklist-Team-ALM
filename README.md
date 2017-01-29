@@ -15,5 +15,6 @@ LINUX/UBUNTU
 <li>No users not on the system</li>
 <li>All users have correct permissions</li>
    </ul>
-6. 
+6. Remove guest account <code>sudo vi /etc/lightdm/lightdm.conf</code> and add allow-guest = false to the end
+7. Check for autologin of unauthorized accounts <code>sudo vi /etc/lightdm/lightdm.conf</code>
  
