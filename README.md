@@ -15,6 +15,11 @@ LINUX/UBUNTU
 <li>No users not on the system</li>
 <li>All users have correct permissions</li>
    </ul>
-6. Remove guest account <code>sudo vi /etc/lightdm/lightdm.conf</code> and add allow-guest = false to the end
-7. Check for autologin of unauthorized accounts <code>sudo vi /etc/lightdm/lightdm.conf</code>
+6. <code> sudo vi /etc/passwd</code> to check for unauthorized users, or use Settings GUI.
+7. Remove guest account <code>sudo vi /etc/lightdm/lightdm.conf</code> and add allow-guest = false to the end
+8. Check for autologin of unauthorized accounts <code>sudo vi /etc/lightdm/lightdm.conf</code>
+9. Install and run lynis to detect threats with https://cisofy.com/download/lynis/ <code>sudo lynis -c</code>
+10. <code>sudo vi /etc/sudoers.d</code> and check for threats from unauthorized users or utilities accessing sudo
+11. Lock down root to disable <code>su</code> by <code>sudo vi /etc/ssh/ssh_config</code> and <code>PermitRootLogin no</code>
+12. <code>sudo vi /etc/group</code>
  
