@@ -34,3 +34,4 @@
 19. Password/PAM. To begin, <code>sudo vi /etc/login.defs</code> and change to <code>PASS_MIN_DAYS 7
 				PASS_MAX_DAYS 90
 				PASS_WARN_AGE 14</code>
+20. Now, <code>sudo vi /etc/pam.d/common-auth</code> and <code>auth optional pam_tally.so deny=5 unlock_time=900 onerr=fail audit even_deny_root_account silent</code> also, Now, <code>sudo vi /etc/pam.d/common-password</code> Add <code>deny=5 unlock_time=1800 </code> to the pam_tally2.so line
