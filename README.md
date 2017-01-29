@@ -1,6 +1,6 @@
 # Cyberpatriot-Checklist-Team-ALM
 
-LINUX/UBUNTU
+<strong>LINUX/UBUNTU</strong>
 
 1. README file
 
@@ -25,5 +25,8 @@ LINUX/UBUNTU
 13. Settings/Updates and enable automatic updates
 14. <code>sudo netstat -lntup</code> or <code>sudo ss -lntup</code> to determine open ports. To close unauthorized ports (not on the readme) use 
 15. <code>sudo ufw enable</code>
-16. <code>cat /proc/sys/net/ipv4/tcp_syncookies</code> and <code>sysctl -n net.ipv4.tcp_syncookies</code>
- 
+16. <code>cat /proc/sys/net/ipv4/tcp_syncookies</code> and <code>sysctl -n net.ipv4.tcp_syncookies</code> to enable syn protection
+17. Insure none of the unauthorized tools are running <code>sudo apt install synaptic</code> to use a package manager. Known malicious programs:
+   <code>
+   wireshark netcat-bsd netcat netcat-openbsd Ophcrack john john-bsd john-openbsd john-freebsd vuze frostwire aircrack metasploit_framework nessus snort kismet nikto yersinia burp-suite THCHydra  oclhashcat  maltego oswapzed cainandabel cain angryipscanner ipscan ettercap hydra medusa
+   </code>
