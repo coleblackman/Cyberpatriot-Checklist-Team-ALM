@@ -1,6 +1,6 @@
 # Cyberpatriot-Checklist-Team-ALM
 
-<strong>LINUX/UBUNTU</strong>
+<strong>LINUX/UBUNTU/DEBIAN</strong>
 
 1. README file
 
@@ -14,6 +14,7 @@
 <li>No unnecessary users</li>
 <li>No users not on the system</li>
 <li>All users have correct permissions</li>
+<li>Remove home folders of users you have deleted</li>
    </ul>
    
 6. <code> sudo vi /etc/passwd</code> to check for unauthorized users, or use Settings GUI.
@@ -26,7 +27,7 @@
 
 10. <code>sudo vi /etc/sudoers.d</code> and check for threats from unauthorized users or utilities accessing sudo
 
-11. Lock down root to disable <code>su</code> by <code>sudo vi /etc/ssh/ssh_config</code> and <code>PermitRootLogin no</code>
+11. Lock down root to disable <code>su</code> by <code>sudo vi /etc/ssh/ssh_config</code> and <code>PermitRootLogin no</code> also disable root for ssh if present
 
 12. <code>sudo vi /etc/group</code> and remove unauthorized accounts
 
@@ -66,6 +67,15 @@
 27. If IPv6 is disabled, <code>sudo vi /etc/sysctl.conf</code><code>net.ipv6.conf.all.disable_ipv6 = 1
 	net.ipv6.conf.default.disable_ipv6 = 1
 	net.ipv6.conf.lo.disable_ipv6 = 1
-	
 	sudo gedit /etc/default/ufw 
 		Set IPv6 = yes</code>
+		
+		
+DEBIAN
+
+<ul>
+<li>No guest account by default</li>
+<li>No lightdm (use GDM3)</li>
+<li>Commands MUST use the full path</li>
+<li>No apt- only apt-get</li>
+</ul>
