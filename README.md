@@ -69,6 +69,7 @@
 	net.ipv6.conf.lo.disable_ipv6 = 1
 	sudo gedit /etc/default/ufw 
 		Set IPv6 = yes</code>
+28. <code>ps aux</code>
 		
 		
 DEBIAN
