@@ -69,7 +69,8 @@
 	net.ipv6.conf.lo.disable_ipv6 = 1
 	sudo gedit /etc/default/ufw 
 		Set IPv6 = yes</code>
-28. <code>ps aux</code>
+28. <code>sudo apt install htop</code> then <code>htop</code> or <code>ps alu</code> If you find a bad program, first <code>pids=$(pgrep ##NAME##)</code> <code>ps axf | grep ##processnametodelete## | grep -v grep | awk '{print "kill -9 " $1}'</code> this gives info before deletion, to kill
+29. <code>ps aux | grep apache2</code> determines if apache is running. Run this for essential programs to verify their status on the machine
 		
 		
 DEBIAN
