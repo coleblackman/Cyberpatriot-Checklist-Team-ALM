@@ -73,7 +73,7 @@
 29. <code>ps aux | grep apache2</code> determines if apache is running. Run this for essential programs to verify their status on the machine. If apache2 happens to be down, <code>sudo service apache2 start</code> this works for any service
 30. <code>sudo chmod 0750 /home/username</code> to change home permissions
 31. <code>passwd -S -a | grep LK | cut -d " " -f1</code> if that produces locked accounts you want unlocked, <code>passwd -u ##USERNAME##</code>
-32. <code>sudo apt install bastille</code><code>bastille -c</code>
+[ ] <code>sudo apt install bastille</code> then <code>bastille -c</code>
 
 
 https://www.sans.org/media/score/checklists/LinuxCheatsheet_2.pdf for a checklist not made by or for cyberpatriot (allowed on comp)
@@ -88,5 +88,5 @@ DEBIAN
 <li>No guest account by default</li>
 <li>No lightdm (use GDM3)</li>
 <li>Commands MUST use the full path</li>
-<li>No apt- only apt-get</li>
+<li>No apt- only apt-get or aptitude</li>
 </ul>
