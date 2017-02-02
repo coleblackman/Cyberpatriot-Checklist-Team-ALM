@@ -1,9 +1,10 @@
 # Cyberpatriot-Checklist-Team-ALM
 
 <strong>LINUX/UBUNTU/DEBIAN</strong>
-
-1. README file
-
+<ul>
+<li>
+-[ ] README file
+</li>
 2. Read over the forensic questions
 
 3. Update entire system <code>sudo apt update</code>
