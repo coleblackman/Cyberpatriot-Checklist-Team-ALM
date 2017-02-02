@@ -88,5 +88,5 @@ DEBIAN
 <li>No guest account by default</li>
 <li>No lightdm (use GDM3)</li>
 <li>Commands MUST use the full path</li>
-<li>No apt- only apt-get or aptitude</li>
+<li>- [ ] No apt- only apt-get or aptitude</li>
 </ul>
