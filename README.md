@@ -27,13 +27,13 @@
 
 10. <code>sudo vi /etc/sudoers.d</code> and check for threats from unauthorized users or utilities accessing sudo
 
-11. Lock down root to disable <code>su</code> by <code>sudo vi /etc/ssh/ssh_config</code> and <code>PermitRootLogin no</code> also disable root for ssh if present
+11. Lock down root to disable <code>su</code> by <code>sudo vi /etc/ssh/ssh_config</code> and <code>PermitRootLogin no</code> also disable root for ssh if present. To lock down root, <code>sudo passwd -l root</code>
 
 12. <code>sudo vi /etc/group</code> and remove unauthorized accounts
 
 13. Settings/Updates and enable automatic updates
 
-14. <code>sudo netstat -lntup</code> or <code>sudo ss -lntup</code> to determine open ports. To close unauthorized ports (not on the readme) use <code>sudo lsof -i :$port</code><code>whereis ##PROGRAM NAME##</code> and use <code>dpkg -S ##PROGRAM LOCATION##</code> now, *carefully* <code>rm ##PROGRAM LOCATION##</code> and <code>killall -9 ##PROGRAME NAME##</code> and <code>sudo apt purge ##PACKAGE LOCATION##</code> Finally, check to make sure it is gone.
+14. <code>sudo netstat -lntup</code> or <code>sudo ss -lntup</code> or <code>nmap –p 0-65535 localhost</code> to determine open ports. To close unauthorized ports (not on the readme) use <code>sudo lsof -i :$port</code><code>whereis ##PROGRAM NAME##</code> and use <code>dpkg -S ##PROGRAM LOCATION##</code> now, *carefully* <code>rm ##PROGRAM LOCATION##</code> and <code>killall -9 ##PROGRAME NAME##</code> and <code>sudo apt purge ##PACKAGE LOCATION##</code> Finally, check to make sure it is gone.
 
 15. <code>sudo ufw enable</code>
 
@@ -69,9 +69,17 @@
 	net.ipv6.conf.lo.disable_ipv6 = 1
 	sudo gedit /etc/default/ufw 
 		Set IPv6 = yes</code>
-28. <code>sudo apt install htop</code> then <code>htop</code> or <code>ps alu</code> If you find a bad program, first <code>pids=$(pgrep ##NAME##)</code> <code>ps axf | grep ##processnametodelete## | grep -v grep | awk '{print "kill -9 " $1}'</code> this gives info before deletion, to kill
-29. <code>ps aux | grep apache2</code> determines if apache is running. Run this for essential programs to verify their status on the machine
-		
+28. <code>sudo apt install htop</code> then <code>htop</code> or <code>ps alu</code> If you find a bad program, first <code>pidof ##PROCESSNAME##</code> <code>ps axf | grep ##processnametodelete## | grep -v grep | awk '{print "kill -9 " $1}'</code> this gives info before deletion, to kill use <code>kill -9 ##Pid##</code>
+29. <code>ps aux | grep apache2</code> determines if apache is running. Run this for essential programs to verify their status on the machine. If apache2 happens to be down, <code>sudo service apache2 start</code> this works for any service
+30. <code>sudo chmod 0750 /home/username</code> to change home permissions
+31. <code>passwd -S -a | grep LK | cut -d " " -f1</code> if that produces locked accounts you want unlocked, <code>passwd -u ##USERNAME##</code>
+32. <code>sudo apt install bastille</code><code>bastille -c</code>
+
+
+https://www.sans.org/media/score/checklists/LinuxCheatsheet_2.pdf for a checklist not made by or for cyberpatriot (allowed on comp)
+https://www.sans.org/media/score/checklists/AuditingUnix.pdf
+https://github.com/lfit/itpol/blob/master/linux-workstation-security.md
+
 		
 DEBIAN
 
