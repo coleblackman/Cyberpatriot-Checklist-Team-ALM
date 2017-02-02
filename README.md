@@ -79,6 +79,7 @@
 https://www.sans.org/media/score/checklists/LinuxCheatsheet_2.pdf for a checklist not made by or for cyberpatriot (allowed on comp)
 https://www.sans.org/media/score/checklists/AuditingUnix.pdf
 https://github.com/lfit/itpol/blob/master/linux-workstation-security.md
+or if you are really reaching http://www.tecmint.com/linux-server-hardening-security-tips/
 
 		
 DEBIAN
