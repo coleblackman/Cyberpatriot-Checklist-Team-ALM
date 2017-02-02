@@ -4,7 +4,7 @@
 
 1. README file
 
-2. Read over the forensic questions
+2. Read over the forensic questions and do them
 
 3. Update entire system <code>sudo apt update</code>
 
