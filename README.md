@@ -69,11 +69,16 @@
 	net.ipv6.conf.lo.disable_ipv6 = 1
 	sudo gedit /etc/default/ufw 
 		Set IPv6 = yes</code>
+		
 28. <code>sudo apt install htop</code> then <code>htop</code> or <code>ps alu</code> If you find a bad program, first <code>pidof ##PROCESSNAME##</code> <code>ps axf | grep ##processnametodelete## | grep -v grep | awk '{print "kill -9 " $1}'</code> this gives info before deletion, to kill use <code>kill -9 ##Pid##</code>
+
 29. <code>ps aux | grep apache2</code> determines if apache is running. Run this for essential programs to verify their status on the machine. If apache2 happens to be down, <code>sudo service apache2 start</code> this works for any service
+
 30. <code>sudo chmod 0750 /home/username</code> to change home permissions
+
 31. <code>passwd -S -a | grep LK | cut -d " " -f1</code> if that produces locked accounts you want unlocked, <code>passwd -u ##USERNAME##</code>
--[ ] <code>sudo apt install bastille</code> then <code>bastille -c</code>
+
+32. <code>sudo apt install bastille</code> then <code>bastille -c</code>
 
 
 https://www.sans.org/media/score/checklists/LinuxCheatsheet_2.pdf for a checklist not made by or for cyberpatriot (allowed on comp)
@@ -85,8 +90,8 @@ or if you are really reaching http://www.tecmint.com/linux-server-hardening-secu
 DEBIAN
 
 <ul>
-<li>No guest account by default</li>
-<li>No lightdm (use GDM3)</li>
-<li>Commands MUST use the full path</li>
-<li>- [ ] No apt- only apt-get or aptitude</li>
+<li>-[ ] No guest account by default</li>
+<li>-[ ] No lightdm (use GDM3)</li>
+<li>-[ ] Commands MUST use the full path</li>
+<li>- [ ] No apt only apt-get and aptitude</li>
 </ul>
