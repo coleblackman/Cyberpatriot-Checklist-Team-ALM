@@ -5,7 +5,7 @@
 <li>
 -[ ] README file
 </li>
--[ ] 2. Read over the forensic questions
+2. Read over the forensic questions
 
 3. Update entire system <code>sudo apt update</code>
 
@@ -18,13 +18,13 @@
 <li>Remove home folders of users you have deleted</li>
    </ul>
    
-6. <code> sudo vi /etc/passwd</code> to check for unauthorized users, or use Settings GUI.
+-[ ] 6. <code> sudo vi /etc/passwd</code> to check for unauthorized users, or use Settings GUI.
 
-7. Remove guest account <code>sudo vi /etc/lightdm/lightdm.conf</code> and add allow-guest = false to the end <code>sudo restart lightdm</code> may be required.
+-[ ] 7. Remove guest account <code>sudo vi /etc/lightdm/lightdm.conf</code> and add allow-guest = false to the end <code>sudo restart lightdm</code> may be required.
 
-8. Check for autologin of unauthorized accounts <code>sudo vi /etc/lightdm/lightdm.conf</code>
+-[ ] 8. Check for autologin of unauthorized accounts <code>sudo vi /etc/lightdm/lightdm.conf</code>
 
-9. Install and run lynis to detect threats with https://cisofy.com/download/lynis/ <code>sudo lynis -c</code>
+-[ ] 9. Install and run lynis to detect threats with https://cisofy.com/download/lynis/ <code>sudo lynis -c</code>
 
 10. <code>sudo vi /etc/sudoers.d</code> and check for threats from unauthorized users or utilities accessing sudo
 
